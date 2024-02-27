@@ -7,7 +7,8 @@
     <title>Первая тестовая страница</title>
   
     <?php
-            echo 2+2;
+           $a = 5;
+          print($a **2);
     ?>
 
 </head>
