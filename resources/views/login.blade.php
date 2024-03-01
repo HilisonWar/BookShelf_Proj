@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +9,26 @@
 </head>
 <body>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+
+    <form method="POST" action="login">
+      @csrf {{ csrf_field() }}
     <div class="login">
       <div class="login-header">
         <h1>Аутентификация</h1>
       </div>
       <div class="login-form">
         <h3>Email:</h3>
-        <input type="text" placeholder="Email"/><br>
+        <input type="email" placeholder="Email" name="email" /><br>
         <h3>Пароль:</h3>
-        <input type="password" placeholder="Пароль"/>
+        <input type="password" placeholder="Пароль" name="password"/>
         <br>
-        <input type="button" value="Login" class="login-button"/>
+      <button type="submit">Войти</button>
         <br>
-        <a class="sign-up">Войти</a>
         <br>
-        <h6 class="no-access">Can't access your account?</h6>
+        <label>Нет аккаунта?</label>
+        <a  href="register">Зарегистрироваться</a> 
       </div>
-    </div>
-    <div class="error-page">
-      <div class="try-again">Error: Try again?</div>
-    </div>
+
+    </form>
 </body>
 </html>
