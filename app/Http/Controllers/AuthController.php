@@ -25,7 +25,8 @@ class AuthController extends Controller
             $user = User::create([
                 'email'    => $request->input('email'),
                 'name'     => $request->input('name'),
-                'password' => bcrypt($request->input('password'))
+                'password' => bcrypt($request->input('password')),
+                'role_id' => $request->input('isAdmin')?  2 : 1
             ]);
 
             Auth::login($user);

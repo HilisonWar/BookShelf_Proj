@@ -24,6 +24,8 @@
         <h3>Пароль:</h3>
         <input type="password" placeholder="Пароль" name="password"/>
         <br>
+        <label>Аккаунт админа </label>
+        <input type="checkbox" name="isAdmin">
       <button type="submit">Зарегистрироваться</button>
       <label>Уже есть аккаунт?</label>
       <a  href="login">Авторизоваться</a> 
